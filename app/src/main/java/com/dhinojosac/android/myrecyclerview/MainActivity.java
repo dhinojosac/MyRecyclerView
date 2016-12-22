@@ -5,6 +5,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.widget.Toast;
 
 import com.dhinojosac.android.myrecyclerview.model.RowData;
 
@@ -27,9 +28,14 @@ public class MainActivity extends AppCompatActivity {
         for (int i = 0; i < 20; i++) {
             rowDataArrayList.add(new RowData());
         }
-        Log.d("DataLsit", String.valueOf(rowDataArrayList));
 
         CustomAdapter adapter = new CustomAdapter(rowDataArrayList);
+        adapter.setRecyclerItemClickListener(new RecyclerItemClickListener() {
+            @Override
+            public void onItemClickListener(int position) {
+                Toast.makeText(getApplicationContext(),"Clicked item "+position,Toast.LENGTH_SHORT).show();
+            }
+        });
         final LinearLayoutManager linearLayoutManager = new LinearLayoutManager(this);
         linearLayoutManager.setOrientation(LinearLayoutManager.VERTICAL);
         recyclerView.setLayoutManager(linearLayoutManager);

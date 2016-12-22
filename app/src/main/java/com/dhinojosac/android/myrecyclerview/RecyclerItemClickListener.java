@@ -1,4 +1,4 @@
-package com.dhinojosac.android.myrecyclerview.presenter;
+package com.dhinojosac.android.myrecyclerview;
 
 import android.view.View;
 import android.widget.AdapterView;

@@ -8,12 +8,8 @@ import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.dhinojosac.android.myrecyclerview.model.RowData;
-import com.dhinojosac.android.myrecyclerview.presenter.RecyclerItemClickListener;
 
 import java.util.ArrayList;
-
-import butterknife.BindView;
-import butterknife.ButterKnife;
 
 /**
  * Created by negro-PC on 21-Dec-16.
